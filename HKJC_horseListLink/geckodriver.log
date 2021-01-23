@@ -1,0 +1,125 @@
+1610904758516	geckodriver	INFO	Listening on 127.0.0.1:63402
+1610904761538	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Leslie\\AppData\\Local\\Temp\\rust_mozprofilefTofyZ"
+1610904785463	geckodriver	INFO	Listening on 127.0.0.1:63484
+1610904788503	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Leslie\\AppData\\Local\\Temp\\rust_mozprofileLM1hTc"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610904791746	Marionette	INFO	Listening on port 63495
+1610904792155	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://racing.hkjc.com/racing/Info/Scripts/jquery-1.4.1.min.js, line 56: unreachable code after return statement
+JavaScript warning: https://racing.hkjc.com/racing/info/GlobalMenu/Chinese/js/global.js, line 1775: unreachable code after return statement
+1610904854612	Marionette	INFO	Stopped listening on port 63495
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Leslie\\AppData\\Local\\Temp\\rust_mozprofileVJhwdB"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610904819779	Marionette	INFO	Listening on port 63600
+1610904820264	Marionette	WARN	TLS certificate errors will be ignored for this session
+1610904829323	Marionette	INFO	Stopped listening on port 63600
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1610907813704	geckodriver	INFO	Listening on 127.0.0.1:51802
+1610907816744	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Leslie\\AppData\\Local\\Temp\\rust_mozprofile1KbHI2"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610907820087	Marionette	INFO	Listening on port 51819
+1610907820397	Marionette	WARN	TLS certificate errors will be ignored for this session
+[Parent 10344, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:166
+1610907831167	Marionette	INFO	Stopped listening on port 51819
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1610907847793	geckodriver	INFO	Listening on 127.0.0.1:51902
+1610907850834	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Leslie\\AppData\\Local\\Temp\\rust_mozprofile7wTYVf"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610907854108	Marionette	INFO	Listening on port 51911
+1610907854486	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://racing.hkjc.com/racing/Info/Scripts/jquery-1.4.1.min.js, line 56: unreachable code after return statement
+JavaScript warning: https://racing.hkjc.com/racing/info/GlobalMenu/Chinese/js/global.js, line 1775: unreachable code after return statement
+1610907870063	Marionette	INFO	Stopped listening on port 51911
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1610907881942	geckodriver	INFO	Listening on 127.0.0.1:52041
+1610907884983	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Leslie\\AppData\\Local\\Temp\\rust_mozprofile9Azv6w"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610907888200	Marionette	INFO	Listening on port 52054
+1610907888636	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://racing.hkjc.com/racing/Info/Scripts/jquery-1.4.1.min.js, line 56: unreachable code after return statement
+JavaScript warning: https://racing.hkjc.com/racing/info/GlobalMenu/Chinese/js/global.js, line 1775: unreachable code after return statement
+1610908983214	Marionette	INFO	Stopped listening on port 52054
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Leslie\\AppData\\Local\\Temp\\rust_mozprofileUldXSu"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610907960415	Marionette	INFO	Listening on port 52217
+1610907960610	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://racing.hkjc.com/racing/Info/Scripts/jquery-1.4.1.min.js, line 56: unreachable code after return statement
+JavaScript warning: https://racing.hkjc.com/racing/info/GlobalMenu/Chinese/js/global.js, line 1775: unreachable code after return statement
+1610908982661	Marionette	INFO	Stopped listening on port 52217
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Leslie\\AppData\\Local\\Temp\\rust_mozprofile42RkcY"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610908028523	Marionette	INFO	Listening on port 52371
+1610908029136	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://racing.hkjc.com/racing/Info/Scripts/jquery-1.4.1.min.js, line 56: unreachable code after return statement
+JavaScript warning: https://racing.hkjc.com/racing/info/GlobalMenu/Chinese/js/global.js, line 1775: unreachable code after return statement
+1610908981607	Marionette	INFO	Stopped listening on port 52371
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Leslie\\AppData\\Local\\Temp\\rust_mozprofilesOkKiF"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610908380141	Marionette	INFO	Listening on port 52849
+1610908380439	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://racing.hkjc.com/racing/Info/Scripts/jquery-1.4.1.min.js, line 56: unreachable code after return statement
+JavaScript warning: https://racing.hkjc.com/racing/info/GlobalMenu/Chinese/js/global.js, line 1775: unreachable code after return statement
+1610908980057	Marionette	INFO	Stopped listening on port 52849
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1610918412499	geckodriver	INFO	Listening on 127.0.0.1:64738
+1610918415532	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "--marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\Leslie\\AppData\\Local\\Temp\\rust_mozprofileNljzNE"
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610918418871	Marionette	INFO	Listening on port 64753
+1610918419237	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://racing.hkjc.com/racing/Info/Scripts/jquery-1.4.1.min.js, line 56: unreachable code after return statement
+JavaScript warning: https://racing.hkjc.com/racing/info/GlobalMenu/Chinese/js/global.js, line 1775: unreachable code after return statement
+[Parent 12252, Gecko_IOThread] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:166
+1610918579492	Marionette	INFO	Stopped listening on port 64753
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+
+Can't find symbol 'eglSwapBuffersWithDamageEXT'.
+Can't find symbol 'eglSetDamageRegionKHR'.
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+1610918512306	Marionette	INFO	Listening on port 64937
+1610918512709	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript warning: https://racing.hkjc.com/racing/Info/Scripts/jquery-1.4.1.min.js, line 56: unreachable code after return statement
+JavaScript warning: https://racing.hkjc.com/racing/info/GlobalMenu/Chinese/js/global.js, line 1775: unreachable code after return statement
+1610918579492	Marionette	INFO	Stopped listening on port 64937
+
+###!!! [Child][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
