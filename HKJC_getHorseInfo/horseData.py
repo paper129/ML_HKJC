@@ -1,5 +1,6 @@
-from os import link
+from os import link, write
 import re
+from sys import excepthook
 from urllib.parse import quote
 from bs4 import BeautifulSoup
 from selenium import webdriver
@@ -15,16 +16,33 @@ def webcatching(link):
     soup = BeautifulSoup(html,"html.parser")
     #Horse Data - Name, Current Trainer, Sire
     horse_name = soup.find("span", {'class': 'title_text'}).getText()
-    trainer_name = soup.find('a', attrs={'href': re.compile('TrainerId=')}).getText()
-    sire_name = soup.find('a', attrs={'href': re.compile('HorseSire=')}).getText().strip()
+    #trianer_name = soup.find('a', attrs={'href': re.compile('TrainerId=')}).getText()
+    trainer_name = ""
+    try: 
+        trianer_name = soup.find('a', attrs={'href': re.compile('TrainerId=')}).getText()
+    except AttributeError:
+        trainer_name = "No record"
+    sire_name = ""
+    try:
+        sire_name = soup.find('a', attrs={'href': re.compile('HorseSire=')}).getText().strip()
+    except AttributeError:
+        sire_name = "Undefined"
     #History of Horse
     data_list = []
     table = soup.find("table", {"class" : "bigborder"})
-    with open(horse_name + '.csv', 'w') as csvfile:
+    filepath = './data/' + horse_name + '.csv'
+    with open(filepath, 'w', newline='\n') as csvfile:
         writer = csv.writer(csvfile)
         for table_body in soup.body.find_all('td', attrs={'class': 'htable_eng_text'}):
-            data_list.append(table_body.get_text().strip())
-        writer.writerows([data_list,])
+            if table_body.get_text().strip():
+                data_list.append(table_body.get_text().strip())
+            if table_body.get_test().strip == "--":
+                data_list.append('\n')
+            else:
+                data_list.append('\n')
+        #writer.writerows([data_list],)
+    print(data_list)
+    
     
     # table_body = table.find('tbody')
     # for row in table_body:
@@ -35,10 +53,10 @@ def webcatching(link):
     print(horse_name)
     print(trainer_name)
     print(sire_name)
-    print(data_list)
+    #print(data_list)
 
 def main(): # testing purpose - FLYING MONKEY (T361)
-    webcatching(link= "https://racing.hkjc.com/racing/information/English/Horse/Horse.aspx?HorseId=HK_2019_D508&Option=1")
+    webcatching(link= "https://racing.hkjc.com/racing/information/English/Horse/Horse.aspx?HorseId=HK_2018_C324&Option=1")
 
 # def main():
 #     n = 0
