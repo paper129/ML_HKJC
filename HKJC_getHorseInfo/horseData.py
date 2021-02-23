@@ -1,3 +1,4 @@
+from logging import NullHandler
 from os import link, write
 import re
 from sys import excepthook
@@ -9,9 +10,12 @@ import csv
 
 def webcatching(link):
     print(link)
-    driver = webdriver.Chrome()
+    driver = webdriver.Chrome('chromedriver')
+    #options = webdriver.ChromeOptions() 
+    #options.headless = True
     driver.get(link)
     time.sleep(3)
+    driver.implicitly_wait(5)
     html = driver.page_source
     soup = BeautifulSoup(html,"html.parser")
     #Horse Data - Name, Current Trainer, Sire
@@ -34,14 +38,12 @@ def webcatching(link):
     with open(filepath, 'w', newline='\n') as csvfile:
         writer = csv.writer(csvfile)
         for table_body in soup.body.find_all('td', attrs={'class': 'htable_eng_text'}):
-            if table_body.get_text().strip():
-                data_list.append(table_body.get_text().strip())
-            if table_body.get_test().strip == "--":
-                data_list.append('\n')
+            #print(table_body.get_text().strip())
+            if "---" not in table_body.get_text().strip():
+                    data_list.append(' ')
             else:
-                data_list.append('\n')
-        #writer.writerows([data_list],)
-    print(data_list)
+                data_list.append('\n')        
+        writer.writerows([data_list],)
     
     
     # table_body = table.find('tbody')
@@ -55,18 +57,18 @@ def webcatching(link):
     print(sire_name)
     #print(data_list)
 
-def main(): # testing purpose - FLYING MONKEY (T361)
-    webcatching(link= "https://racing.hkjc.com/racing/information/English/Horse/Horse.aspx?HorseId=HK_2018_C324&Option=1")
+# def main(): # testing purpose - FLYING MONKEY (T361)
+#     webcatching(link= "https://racing.hkjc.com/racing/information/English/Horse/Horse.aspx?HorseId=HK_2018_C324&Option=1")
 
-# def main():
-#     n = 0
-#     with open("fullLinkList.txt", "r") as f:
-#         for line in f:
-#             print(n+1)
-#             n = n + 1
-#             webcatching(line)
-#             if line == '':
-#                 break
+def main():
+    n = 0
+    with open("fullLinkList.txt", "r") as f:
+        for line in f:
+            print(n+1)
+            n = n + 1
+            webcatching(line)
+            if line == '':
+                break
 
 if __name__ == '__main__':
     main()
