@@ -8,6 +8,9 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 import time
 import csv
+from itertools import islice 
+import json
+
 
 def web(link, year, mth, day, RaceNo, loc, syr):
     driver = webdriver.Chrome('chromedriver')
@@ -30,7 +33,7 @@ def web(link, year, mth, day, RaceNo, loc, syr):
         temp1 = temp.split("(")
         temp2 = temp1[1].split(")")
         year1 = int(syr) + 1
-        RaceID = syr + "/" + str(year1) + "-" + temp2[0] #identifer of Race (season + raceid)
+        RaceID = syr + "-" + str(year1) + "-" + temp2[0] #identifer of Race (season + raceid)
         print("RaceID: " + RaceID)
         temp = ""
         temp = soup.find('td', {'style':'width: 385px;'}).getText()
@@ -55,8 +58,21 @@ def web(link, year, mth, day, RaceNo, loc, syr):
             temp1 = ""
             i = i + 1
         print(raceTime)
-            
-
+        my_dict = {}
+        #headers = [header.text for header in soup.findAll('table')[2].find('tr', {'class': 'bg_blue color_w'}).find_all('td')]
+        headers = ["Pla","Horse No","Horse","Jockey","Trainer","Act Wt","Declare Horse Wt","Draw","LBW","RunningPos","Finish Time","Win Odds"]
+        cnt = 0
+        resultTable = soup.findAll('table')[2].find_all('tr', {'class' : None})
+        filename = RaceID + ".csv"
+        with open('./data/' + filename, 'a', newline='') as csvfile:
+            writer = csv.DictWriter(csvfile, fieldnames=headers)
+            writer.writeheader()
+            for vals in resultTable:
+                vals = [i.text.replace('\n', '').replace("\xa0", '').replace('                                ', '')
+                .replace('                ','').replace('            ','').replace('        ',' ') for i in vals.find_all('td')]
+                my_dict.update(dict(zip(headers, vals)))
+                print(my_dict)
+                writer.writerow(my_dict)    
     driver.close()
 
 def main():
@@ -68,6 +84,7 @@ def main():
     num = "1"
     loc = "ST"
     #loc = "HV" 
+    #link = "https://racing.hkjc.com/racing/information/English/Racing/LocalResults.aspx?RaceDate=2021/02/28"
     link = 'https://racing.hkjc.com/racing/information/English/Racing/LocalResults.aspx?RaceDate=' + year + '/' + mth + '/'+ day + "&Racecourse=" + loc + "&RaceNo=" + num
     web(link=link, year=year, mth=mth, day=day, RaceNo=num, loc=loc, syr=syr)
 
