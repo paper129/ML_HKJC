@@ -101,11 +101,11 @@ def main():
     #Fetch all race data from 2018/19 - 2019/20 (SHA TIN)
     syr = 21
     year = "20" + str(syr)
-    mth = 1
-    day = 1
+    mth = 3
+    day = 11
     num = 0
-    #loc = "ST"
-    loc = "HV" 
+    loc = "ST"
+    #loc = "HV" 
     #link = "https://racing.hkjc.com/racing/information/English/Racing/LocalResults.aspx?RaceDate=2021/02/28"
     while grabbing == True:
         if day >= 1 and day <= 9:
@@ -141,7 +141,7 @@ def main():
             
         
         
-    if year == 20 and mth == 3 and day == 9:
+    if year == 20 and mth == 4 and day == 16:
         grabbing = False
         print("done")
     

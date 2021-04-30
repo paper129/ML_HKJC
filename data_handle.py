@@ -3,28 +3,30 @@ from warnings import catch_warnings
 
 from pandas.core.arrays.categorical import contains
 
-with open('HV-Prod.csv', 'a', newline='') as csvfile:
+with open('AllRecord-Prod.csv', 'a', newline='') as csvfile:
     writer = csv.writer(csvfile)
     #writer.writerow(['Pla','Horse No','Horse','Jockey','Trainer','Act Wt','Declare Horse Wt','Draw','LBW','RunningPos','Finish Time','Win Odds','RaceID','Class','Loc','Length','Going','Track'])
-    writer.writerow(['Pla','Going','Dist','Draw','JW','AW','Time','WOdd'])
+    writer.writerow(['Pla','Loc','Going','Dist','Draw','JW','AW','Time','WOdd','Class'])
 
-with open('HV_Dataset.csv') as csvfile:
+with open('All_Re.csv') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
         print(row.keys())
         try:
             content = []
             #Place
-            content.append(row['Pla'])
+            place_str = row['Pla'].strip()
+            content.append(place_str)
 
             #Location
-            if "HV" in row['Loc']:
+            if "ST" in row['Loc']:
                 content.append("0") #ST CODE: 0
             else:
-                content.append("1")
+                if "HV" in row['Loc']:
+                    content.append("1")
             
             #Track
-            if 'T-1F' in row['Track']: #TURF TRACK
+            if 'TURF' in row['Track']: #TURF TRACK
                 content.append('0')
                 if "FIRM" == row['Going']:
                     content.append('0')
@@ -99,9 +101,23 @@ with open('HV_Dataset.csv') as csvfile:
             else:
                 odds = -1
             content.append(odds)
-            print(content)
+            #Class
+            classstr = row['Class'].split(' ')[1]
+            print(classstr)
+            try:
+                classInt = int(classstr)
+                content.append(classInt)
+            except:
+                if classstr == "One":
+                    classInt = 11
+                if classstr == "Two":
+                    classstr = 12
+                if classstr == "Three":
+                    classstr = 13
+                content.append(classInt)
+            print(content[0])
 
-            with open('HV-Prod.csv', 'a', newline='') as csvfile:
+            with open('AllRecord-Prod.csv', 'a', newline='') as csvfile:
                 writer = csv.writer(csvfile)
                 writer.writerow(content)
         except Exception as e:
